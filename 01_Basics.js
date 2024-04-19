@@ -130,3 +130,90 @@ console.log(str3.split(',')); //['a', 'b', 'c', 'd']
 
 
 */
+
+
+
+/*
+ Objects
+    
+
+const person = {
+    name:"Abhinav",
+    age: 23,
+}
+
+// obj to string
+
+console.log(JSON.stringify(person)); //{"name":"Abhinav","age":23}
+console.log(JSON.parse(JSON.stringify(person))); // back to obj => {name: 'Abhinav', age: 23}
+
+person.name = 'Ekta'; // we can change the value, we cant resign the obj 
+console.log(person); //{name: 'Ekta', age: 23}
+
+*/
+
+
+
+/*
+// Map
+
+// just prototype implementation - unrelated specific to map
+const map = new Map();
+console.log(map);
+
+Map.prototype.myVal = ()=>{
+    console.log("new Feature");
+}
+
+map.myVal();
+
+
+// lets get back to basics :)
+
+map.set(143,"I love you");
+
+console.log(map.get(143));
+console.log(map.size);
+console.log(map.get(11334848)); // undefined
+*/
+
+
+/**
+ * Set
+ * const set = new Set();
+ * console.log(set); // empty set
+    set.add("hello");
+    set.add('world');
+    console.log(set.has("hello")); // true
+    console.log(set.size) // size of set
+    set.delete("hello");
+ */
+
+
+/**
+ * Arrays
+ * const arr = [1,2,3];
+ * log(arr);
+ * log(arr.length)
+ * arr.push(4);
+ * 
+ * arr at the end of the day is an objects !!
+ * 
+ * console.log(typeof arr); // obj
+ * 
+ */
+
+
+/**
+ * Function
+ * 
+ * function addTwo(num) {
+ *      return num+2;
+ *  }
+ * 
+ *  function addTwo(num=6) {   // default value passed, if no arg passed in param, it will take the default value!
+ *      return num+2;
+ *  }
+ * 
+ * console.log(addTwo(3));
+ */
