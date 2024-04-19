@@ -216,4 +216,106 @@ console.log(map.get(11334848)); // undefined
  *  }
  * 
  * console.log(addTwo(3));
+ * 
+ * function callFunc(func, param){
+ *      console.log(func(param));
+ * }    
+ * 
+ * 
+ * callFunc(addTwo, 3) => 5
+ * 
+ * log(typeof addTwo)  // function
+ * log(addTwo instanceof Object); // true
+ *  */
+
+
+
+/**
+ * Loops
+ * for(let i=0; i<5; i++){
+ *  log(i);
+ * if(i===1) break;
+ * }
+ * // can use continue to skip
+ * 
+ * while(i<5){
+ *  log(i)
+ *  i++;
+ * }
+ * 
+ * // do while loop also exist => same logic
+ * 
+ * 
+ * for(const value of [1,2,3]){
+ * log(value)
+ * }
+ * 
+ * // 1 2 3
+ * 
+ * for(const value of 'abc'){
+ * log(value)
+ * }
+ * 
+ * // a b c
+ * 
+ * 
+ * const obj = {
+ *      name: "Abhinav",
+ *      sex: "Male",
+ * }
+ * 
+ * for(const key in obj){
+ *      log(key); // name, sex...
+ *      log(obj[key]) // Abhinav, Male...
+ * }
+ * 
+ * 
+ * [1,2,3].forEach(function(value){
+ *      log(value);
+ * })
+ * 
+ * // 1 2 3
+ * 
+ * 
+ * if else same!!
+ * 
+ * 
+ * ternaray operator => you knwo it :)
  */
+
+
+/**
+ * throw 'Oh No'; // will throw 
+ * throw new Error('oh nooo');
+ * 
+ * try{
+ * throw new Error('oh nooo');
+ * }
+ * catch(err){
+ * log(err)
+ * 
+ * }
+ * 
+ * // it will log err
+ * 
+ *  */
+
+
+/**
+ * console.log
+ * console.warn
+ * console.error
+ * console.table
+ * console.time('key'); console.timeEnd('key');
+ */
+
+
+/**
+ * 'use strict'
+ * 
+ * c=5; // err with strict
+ */
+
+
+
+
