@@ -75,8 +75,77 @@ arr1.forEach((val, index) => {
 },{num:20}); // this will log {num:20}
 
 
-const mappedArr = arr1.map(function(val,index){
+const mappedArr = arr1.map(function(val,index, arr){
     return val + index + this.num
 },{num:20});  // [1,2,3] =>  [21, 23, 25]
 // it wont change original array
 
+
+const filteredArray = arr1.filter(function(val,index, arr){
+    return val > this.num
+},{num:1});  // [1,2,3] => [2,3]
+
+
+// found => returns first value that matche the condition
+
+const foundValue = arr1.find(function(val,index, arr){
+    return val > this.num
+},{num:1});  // [1,2,3] => 2 // 2 was returned as it was found first that matched the condition
+
+
+const foundIndex = arr1.findIndex(function(val,index, arr){
+    return val > this.num
+},{num:1});  // [1,2,3] => 1 // 1 (which is index) was returned as it was found first that matched the condition
+
+
+const allPas = arr1.every(function(val,index, arr){
+    return val > this.num
+},{num:1}) // false
+//Determines whether all the members of an array satisfy the specified test. 
+
+
+const anyPas = arr1.some(function(val,index, arr){
+    return val > this.num
+},{num:1}) // true
+//Determines whether the specified callback function returns true for any element of an array.
+
+
+
+/*                                            reduce                                      */
+
+const sum = arr1.reduce(function(accumulator, currentValue, index, arr){
+    return accumulator + currentValue;
+},0);
+// [1,2,3] => 6
+
+
+const sum2 = arr1.reduceRight(function(accumulator, currentValue, index, arr){
+    return accumulator + currentValue;
+},0);  // it starts from right hand side of array
+
+
+
+
+/*******************SORT*********************** */
+
+arr1.sort(); //Sorts an array in place.
+// This method mutates the array and returns a reference to the same array.
+
+arr1.sort(compareNumbers);
+
+function compareNumbers(firstumber,secondNumber) {
+    return firstumber- secondNumber; // ascending
+   // return secondNumber - firstumber; // descending
+   // return 0; // no change 
+}
+
+
+function compareNumbers(firstumber,secondNumber) {
+    // suppose we alway want 3 to come first
+
+    if(firstumber===3) return -1;
+    if(secondNumber===3) return -1;
+    return firstumber- secondNumber; // ascending
+   // return secondNumber - firstumber; // descending
+   // return 0; // no change 
+}
