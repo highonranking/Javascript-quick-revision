@@ -10,7 +10,7 @@ console.log("letNum", letNum);
 // hoisting....
 
 
-
+/*
 console.log("varNum", varNum);  // undefined
 console.log("letNum", letNum); // reference error 
 
@@ -38,3 +38,7 @@ const constNum = 0;
 constNum = 3;  // error => cant re-assign
 
 // but we can mutate... like arr.push... in const arr;
+
+
+*/
+
