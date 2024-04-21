@@ -39,3 +39,61 @@ Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Op
 */
 
 
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, look at Logical NOT operator
+0 == !!undefined; // true, look at Logical NOT operator
+null == undefined; // true
+
+const number1 = new Number(3);
+const number2 = new Number(3);
+number1 == 3; // true
+number1 == number2; // false
+
+
+const object1 = {
+    key: "value",
+  };
+  
+  const object2 = {
+    key: "value",
+  };
+  
+  console.log(object1 == object2); // false
+  console.log(object1 == object1); // true
+
+  
+/*
+  strings constructed using new String() are objects. If you compare one of these with a string literal, the String object will be converted to a string literal and the contents will be compared. 
+  However, if both operands are String objects, then they are compared as objects and must reference the same object for comparison to succeed
+
+*/
+const string1 = "hello";
+const string2 = String("hello");
+const string3 = new String("hello");
+const string4 = new String("hello");
+
+console.log(string1 == string2); // true
+console.log(string1 == string3); // true
+console.log(string2 == string3); // true
+console.log(string3 == string4); // false
+console.log(string4 == string4); // true
+
+
+
+const d = new Date("1995-12-17T03:24:00");
+const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
+console.log(d == s); //true
+
+const a = [1, 2, 3];
+const b = "1,2,3";
+a == b; // true, `a` converts to string
+
+const c = [true, 0.5, "hey"];
+const f = c.toString(); // "true,0.5,hey"
+c == f; // true
+
+
