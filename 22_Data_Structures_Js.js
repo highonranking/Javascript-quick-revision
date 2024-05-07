@@ -195,3 +195,32 @@ list.addEnd(3);
 
 console.log(list.head.value);
 console.log(list.head.next.next.value);
+
+
+
+
+/**
+ * Key Terms
+Map
+A built-in JavaScript class for holding key-value pairs. While similar to standard objects, maps have a few key differences:
+
+Map keys can be of any type, while object keys must be strings or symbols.
+Maps maintain insertion order for iteration, while objects do not.
+Maps cannot easily be converted to JSON, while objects can.
+Objects oftentimes utilize the prototype chain for inheritance, while Maps cannot do this.
+Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+Set
+A built-in JavaScript class for holding unique values of any type. Values are considered unique if they are different primitives or references to different objects (this means that two different objects with the same contents are considered unique from each other). Values in Sets are kept in insertion order for when the Set is iterated over.
+
+Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+WeakMap
+A built-in JavaScript class for holding key-value pairs similar to the Map class. There are two primary differences between Map and WeakMap:
+
+WeakMap can only have objects as keys, primitive values cannot be added as keys.
+WeakMaps hold "weak" references to objects, meaning that they do not prevent the objects from being garbage collected. If no other references to an object exist, it can be garbage collected and automatically removed from the WeakMap. As a result, WeakMaps cannot be iterated over.
+Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
+WeakSet
+A built-in JavaScript class for holding unique values similar to the Set class. However, a WeakSet acts just like a WeakMap, meaning that the values must all be objects, and references to those objects are "weakly" held.
+
+Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
+ */
